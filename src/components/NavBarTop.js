@@ -1,25 +1,48 @@
 import { Link } from 'react-router-dom'
+import { makeStyles, withTheme } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 
 export default function NavBarTop() {
+
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          flexGrow: 1,
+        },
+        menuButton: {
+          marginRight: theme.spacing(3),
+        },
+        title: {
+          flexGrow: 1,
+        },
+      }));
+
+      const classes = useStyles();
     return (
-        <>
-            <h1>Movies</h1>
-            <ul>
+        <AppBar position="static" className={classes.root}>
+            <Typography variant="h1" className={classes.title} >Movies</Typography>
+            <Toolbar>
             {<Link to="/" >
-                    <li>Home</li>
+                    <Button className={classes.color}>
+                        <Typography>
+                        Home
+                        </Typography>
+                        </Button>
                 </Link>}
                 
                 <Link to="/New-movies">
-                    <li>Ultimos lanzamientos</li>
+                    <Button color="inherit">Ultimos lanzamientos</Button>
                 </Link>
                 <Link to="/Populares">
-                    <li>Populares</li>
+                    <Button color="inherit">Populares</Button>
                 </Link>
                 <Link to="/Buscar">
-                    <li>Buscar</li>
+                    <Button color="inherit">Buscar</Button>
                 </Link>
-            </ul>
-        </>
+            </Toolbar>
+        </AppBar>
     )
 }
