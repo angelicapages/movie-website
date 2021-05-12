@@ -24,7 +24,7 @@ export default function MovieCards() {
         <>
             {movies.map(movie => {          
                 return <div>
-                    <Link to="/PeliculaPopular">
+                    <Link to={`PeliculaPopular/${movie['id']}`}>
                         <h1>{movie['original_title']}</h1>
                         <img src={`${base_url}${movie['poster_path']}`} />
                     </Link>
