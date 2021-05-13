@@ -33,7 +33,7 @@ export default function NavBarTop() {
                         </Button>
                 </Link>}
                 
-                <Link to="/New-movies">
+                <Link to="/Ultimos-Lanzamientos">
                     <Button color="inherit">Ultimos lanzamientos</Button>
                 </Link>
                 <Link to="/Populares">
