@@ -4,7 +4,7 @@ import NavBarTop from './components/NavBarTop'
 import Populares from './components/Populares'
 import Buscar from './components/Buscar'
 import Home from './components/home'
-import PeliculaPopular from './components/PeliculaPopular'
+import PeliculaPopular from './components/Pelicula'
 
 function App() {
 

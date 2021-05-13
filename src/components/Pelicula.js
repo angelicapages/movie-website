@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './movie.css'
 
 
-function PeliculaPopular (key) {
+function Pelicula () {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -21,4 +21,4 @@ function PeliculaPopular (key) {
         </>
     )
 }
-export default PeliculaPopular
+export default Pelicula
