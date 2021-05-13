@@ -1,15 +1,16 @@
-import { useEffect} from 'react'
+import { useEffect, useState} from 'react'
 import {base_url, api_key, query} from '../variables/variables'
 
 
 
 export default function useFetch(id){
-
+const [pelicula, setpelicula] = useState([])
     useEffect(() => {
     fetch(`${base_url}${id}api_key=${api_key}?${query}`)
         .then(res => res.json())
         .then(data => {
-            return data['results']
+            setpelicula(data['results']) 
+return pelicula
         }
         )
 }, [])

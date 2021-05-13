@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { useState } from 'react'
 import './movie.css'
 import {base_url_img} from '../variables/variables'
 
 export default function MovieCards(peliculas) {
-
 
     return (
         <>
