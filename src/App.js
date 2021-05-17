@@ -13,13 +13,13 @@ function App() {
 
       <BrowserRouter>
 
-          <NavBarTop />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/Ultimos-Lanzamientos" component={UltimosLanzamientos} />
-          <Route exact path="/Populares" component={Populares} />
-          <Route exact path="/Buscar" component={Buscar} />
-          <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
-       
+        <NavBarTop />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Ultimos-Lanzamientos" component={UltimosLanzamientos} />
+        <Route exact path="/Populares" component={Populares} />
+        <Route exact path="/Buscar" component={Buscar} />
+        <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
+
       </BrowserRouter>
     </>
   );
