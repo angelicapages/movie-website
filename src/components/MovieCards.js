@@ -1,36 +1,25 @@
-
-import React from 'react'
-import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './movie.css'
+import { base_url_img } from '../variables/variables'
 
-export default function MovieCards() {
-    const [movies, setMovies] = useState([])
-    const base_url = "https://image.tmdb.org/t/p/original"
-
-    useEffect(() => {
-        fetch('https://api.themoviedb.org/3/discover/movie?api_key=f99c23308f40c1c01f9f6b78ac66fa01&with_genres=28')
-            .then(res => res.json())
-            .then(data => {
-                setMovies(data['results'])
-
-            }
-            )
-    }, [movies])
-
+const MovieCards = ({ peliculas }) => {
+    console.log(peliculas)
     return (
         <>
-            {movies.map(movie => {
-                return <div>
-                    <h1>{movie['original_title']}</h1>
-                    <img className='movie' src={`${base_url}${movie['poster_path']}`} />
-                    <p>{movie['overview']}</p>
+            {peliculas.map(pelicula => {
+                return <div key={pelicula.id}>
+                    <Link to={`pelicula/${pelicula.id}`}>
+                        <h1>{pelicula.original_title}</h1>
+                        <img src={`${base_url_img}${pelicula.poster_path}`} />
+                    </Link>
+                    <p>{pelicula.overview}</p>
                 </div>
             })}
 
         </>
     )
 }
-
+export default MovieCards
 // const MovieCards = Texto => (
 
 //     return 
