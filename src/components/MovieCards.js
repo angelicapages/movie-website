@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
-
 import './movie.css'
 import { base_url_img } from '../variables/variables'
 
-function MovieCards(peliculas) {
+const MovieCards = ({ peliculas }) => {
     console.log(peliculas)
     return (
         <>
