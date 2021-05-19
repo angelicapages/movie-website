@@ -6,20 +6,19 @@ import Buscar from './components/Buscar'
 import Home from './components/home'
 import PeliculaPopular from './components/Pelicula'
 
+
 function App() {
 
   return (
     <>
 
       <BrowserRouter>
-
         <NavBarTop />
         <Route exact path="/" component={Home} />
         <Route exact path="/Ultimos-Lanzamientos" component={UltimosLanzamientos} />
         <Route exact path="/Populares" component={Populares} />
         <Route exact path="/Buscar" component={Buscar} />
         <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
-
       </BrowserRouter>
     </>
   );

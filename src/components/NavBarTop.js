@@ -5,44 +5,44 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { ThemeProvider } from '@material-ui/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import { IconButton, Container } from '@material-ui/core';
+// import MenuIcon from '@material-ui/icons/Menu';
+// import { IconButton } from '@material-ui/core';
 
 
 export default function NavBarTop() {
 
 
   return (
-    <Container maxWidth="sm">
-      <ThemeProvider theme={Theme}>
-        <AppBar color="primary" position="fixed">
 
-          <Typography variant="h1">Movies</Typography>
-          <Toolbar>
+    <ThemeProvider theme={Theme}>
+      <AppBar color="primary" position="fixed">
 
-            <IconButton edge="start" color="main">
-              <MenuIcon />
-            </IconButton>
+        <Typography variant="h1">Movies</Typography>
+        <Toolbar>
 
-            <Link to="/" >
-              <Button >Home</Button>
-            </Link>
+          {/* <IconButton edge="start" color="dark">
+            <MenuIcon />
+          </IconButton> */}
 
-            <Link to="/Ultimos-Lanzamientos">
-              <Button >Ultimos lanzamientos</Button>
-            </Link>
+          <Link to="/">
+            <Button >Home</Button>
+          </Link>
 
-            <Link to="/Populares">
-              <Button >Populares</Button>
-            </Link>
+          <Link to="/Ultimos-Lanzamientos">
+            <Button >Ultimos lanzamientos</Button>
+          </Link>
 
-            <Link to="/Buscar">
-              <Button >Buscar</Button>
-            </Link>
+          <Link to="/Populares">
+            <Button >Populares</Button>
+          </Link>
 
-          </Toolbar>
-        </AppBar>
-      </ThemeProvider>
-    </Container>
+          <Link to="/Buscar">
+            <Button >Buscar</Button>
+          </Link>
+
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
+
   )
 }

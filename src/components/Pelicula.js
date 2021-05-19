@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './movie.css'
 
 
-function Pelicula () {
+function Pelicula() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -13,10 +13,10 @@ function Pelicula () {
                 setMovies(data['results'])
             }
             )
-    }, [movies])    
+    }, [movies])
     return (
         <>
-       
+
 
         </>
     )
