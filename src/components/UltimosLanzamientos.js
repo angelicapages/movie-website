@@ -1,13 +1,13 @@
 import { url_ultimos_lanzamientos } from '../variables/variables'
 import useFetch from '../hooks/useFetch'
-import MovieCards from './MovieCards'
+import Tarjetas from './Tarjetas'
 
 const UltimosLanzamientos = () => {
     const peliculasUltimosLanzamientos = useFetch(url_ultimos_lanzamientos)
     return (
         <section>
             <h1>Ultimos lanzamientos</h1>
-            <MovieCards
+            <Tarjetas
                 peliculas={peliculasUltimosLanzamientos}
             />
         </section>
