@@ -15,8 +15,7 @@ export default function NavBarTop() {
   return (
 
     <ThemeProvider theme={Theme}>
-      <AppBar color="primary" position="fixed">
-
+      <AppBar color="primary" position="sticky" top="0px">
         <Typography variant="h1">Movies</Typography>
         <Toolbar>
 

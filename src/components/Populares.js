@@ -7,7 +7,9 @@ const Populares = () => {
     return (
         <section>
             <h1>Películas Populares</h1>
-            <Tarjetas peliculas={peliculasPopulares} />
+            <div>
+                <Tarjetas peliculas={peliculasPopulares} />
+            </div>
         </section>
     )
 }
