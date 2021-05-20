@@ -7,9 +7,11 @@ const UltimosLanzamientos = () => {
     return (
         <section>
             <h1>Ultimos lanzamientos</h1>
-            <Tarjetas
-                peliculas={peliculasUltimosLanzamientos}
-            />
+            <div>
+                <Tarjetas
+                    peliculas={peliculasUltimosLanzamientos}
+                />
+            </div>
         </section>
     )
 }

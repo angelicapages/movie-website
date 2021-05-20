@@ -1,6 +1,13 @@
-.movie{
+img{
     max-height: 150px;
     max-width: 200px;
     width: 120px;
     height: 120px;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
 }
