@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function useFetch(id) {
+const useFetch=(id)=> {
     const [pelicula, setPelicula] = useState([])
     useEffect(() => {
         fetch(id)
@@ -13,3 +13,5 @@ export default function useFetch(id) {
     return pelicula
 
 }
+
+export default useFetch
