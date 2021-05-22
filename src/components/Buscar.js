@@ -2,6 +2,7 @@ import TextField from '@material-ui/core/TextField';
 import Tarjetas from './Tarjetas';
 import { url_buscar, pagina } from '../variables/variables'
 import { useEffect, useState } from 'react'
+
 const Buscar = () => {
 
     const [peliculaBuscada, setpeliculaBuscada] = useState('')
