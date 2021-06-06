@@ -12,6 +12,12 @@ const PeliculaDetalle = () => {
     const paramsUrl = `${url_base}${type_movie}${params.id}?api_key=${api_key}&${language}`
     const pelicula = useFetchDetalle(paramsUrl)
 
+
+    const handleChange = () => {
+console.log (pelicula)
+    }
+
+
     return (
         <>
             <Card>
@@ -21,6 +27,9 @@ const PeliculaDetalle = () => {
                     <CardMedia>
                         <img src={`${base_url_img}${pelicula.poster_path}`} />
                     </CardMedia>
+                    <button onClick={handleChange}>
+                        Trailer
+                    </button>
                 </CardContent>
             </Card>
         </>
