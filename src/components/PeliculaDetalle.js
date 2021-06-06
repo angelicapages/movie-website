@@ -7,11 +7,11 @@ import useFetch from '../hooks/useFetch'
 import { url_base, type_movie, api_key, language } from '../variables/variables'
 
 const PeliculaDetalle = () => {
-
     let params = useParams();
-    const paramsUrl = `${url_base}${type_movie}${params}?${api_key}&${language}`
-    const pelicula = useFetch(paramsUrl)
-    return console.log(pelicula)
+  
+    // const paramsUrl = `${url_base}${type_movie}${params}?${api_key}&${language}`
+    // const pelicula = useFetch(paramsUrl)
+    // return console.log(pelicula)
 
     // let params = useParams();
     // const paramsUrl = `${url_base}${type_movie}${params}?${api_key}&${language}`
