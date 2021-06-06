@@ -12,13 +12,13 @@ const Tarjetas = ({ peliculas }) => {
             {peliculas.map(pelicula => {
                 return <Grid item xs={6} sm={3}
                     elevation={3}
-                    direction="row"
                     justify="center"
-                    alignItems="center">
+                    alignItems="center"
+                    key={pelicula.id}>
 
-                    <Card key={pelicula.id} >
+                    <Card >
                         <CardContent>
-                            <Link to={`pelicula/${pelicula.id}`} >
+                            <Link to={`peliculaDetalle/${pelicula.id}`} >
                                 <h1>{pelicula.original_name}{pelicula.original_title}</h1>
                                 <CardMedia>
                                     <img src={`${base_url_img}${pelicula.poster_path}`} />
@@ -34,16 +34,5 @@ const Tarjetas = ({ peliculas }) => {
     )
 }
 export default Tarjetas
-// const MovieCards = Texto => (
 
-//     return 
-
-//     <div>
-//       <h1>{Texto}</h1>
-{/* <p>{pelicula.overview}</p> */ }
-
-//     </div>
-//   )
-
-//   export default MovieCards 
 
