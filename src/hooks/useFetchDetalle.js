@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 
-const useFetch=(param)=> {
+const useFetchDetalle=(param)=> {
     const [pelicula, setPelicula] = useState([])
     useEffect(() => {
         fetch(param)
             .then(res => res.json())
             .then(data => {
-                setPelicula(data['results'])
+                setPelicula(data)
             }
             )
     }, [])
@@ -14,4 +14,4 @@ const useFetch=(param)=> {
 
 }
 
-export default useFetch
+export default useFetchDetalle

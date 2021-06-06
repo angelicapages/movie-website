@@ -34,16 +34,5 @@ const Tarjetas = ({ peliculas }) => {
     )
 }
 export default Tarjetas
-// const MovieCards = Texto => (
 
-//     return 
-
-//     <div>
-//       <h1>{Texto}</h1>
-
-
-//     </div>
-//   )
-
-//   export default MovieCards 
 
