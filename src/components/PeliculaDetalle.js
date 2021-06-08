@@ -5,16 +5,20 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { useParams } from 'react-router-dom'
 import useFetchDetalle from '../hooks/useFetchDetalle'
 import { url_base, type_movie, api_key, language } from '../variables/variables'
+import Trailer from './Trailer'
 
 const PeliculaDetalle = () => {
     let params = useParams();
 
-    const paramsUrl = `${url_base}${type_movie}${params.id}?api_key=${api_key}&${language}`
-    const pelicula = useFetchDetalle(paramsUrl)
-
+    const urlTarjeta = `${url_base}${type_movie}${params.id}?api_key=${api_key}&${language}`
+    const urlVideo = `${url_base}${type_movie}${params.id}/videos?api_key=${api_key}&${language}`
+    const video = useFetchDetalle(urlVideo)
+    const pelicula = useFetchDetalle(urlTarjeta)
 
     const handleChange = () => {
-console.log (pelicula)
+        return (<Trailer
+            video={video}
+        />)
     }
 
 
