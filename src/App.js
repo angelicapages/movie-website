@@ -6,12 +6,13 @@ import Buscar from './components/Buscar'
 import Home from './components/home'
 import PeliculaPopular from './components/Pelicula'
 import PeliculaDetalle from './components/PeliculaDetalle'
+import { ContenedorGeneral } from './components/style/ContenedoresStyle'
 
 function App() {
 
   return (
-    <>
 
+    <ContenedorGeneral>
       <BrowserRouter>
         <NavBarTop />
         <Route exact path="/" component={Home} />
@@ -21,7 +22,7 @@ function App() {
         <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
         <Route exact path="/PeliculaDetalle/:id" component={PeliculaDetalle} />
       </BrowserRouter>
-    </>
+    </ContenedorGeneral>
   );
 }
 
