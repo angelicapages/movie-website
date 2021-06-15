@@ -1,5 +1,10 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+import theme from './Theme'
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
+    body{
+    background: ${theme.colors.background};
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }`
 
-`
+export default GlobalStyle

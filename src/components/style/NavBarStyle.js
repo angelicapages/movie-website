@@ -4,8 +4,8 @@ import theme from './Theme'
 export const Nav = styled.nav`
     display: flex ;
     flex-direction: row;
-    width: 100vw;
-    background-color: ${props => props.theme.colors.primary};
+    width: 100%;
+    background-color: ${theme.colors.primary};
 `;
 
 export const Ul = styled.ul`

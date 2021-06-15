@@ -3,33 +3,50 @@ import useFetch from '../hooks/useFetch'
 import { base_url_img } from '../variables/variables'
 import { Link } from 'react-router-dom'
 import { Button } from './style/ButtonStyle'
-import { CarruselSection, CarruselImg } from './style/CarruselStyle'
-import { Titulo } from "./style/TituloStyle";
+import { CarruselSection, CarruselImg, ContenedorDeFlecha } from './style/CarruselStyle'
+import { Titulo, Texto } from "./style/TextoStyle";
 import theme from './style/Theme'
-import Slider from 'infinite-react-carousel'
-
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { ContenedorCentrado } from './style/ContenedoresStyle'
 const Carrusel = () => {
     const peliculasCarrusel = useFetch(url_carrusel)
-    console.log(peliculasCarrusel)
 
     return (
+
         <CarruselSection>
+
             {peliculasCarrusel.map(pelicula => {
                 return (
 
-                    <Slider key={pelicula.id}>
+                    <article key={pelicula.id}>
+                        <CarruselImg url={`${base_url_img}${pelicula.poster_path}`}>
 
-                        <CarruselImg src={`${base_url_img}${pelicula.poster_path}`} />
-                        <Titulo>{pelicula.original_name}{pelicula.original_title}</Titulo>
-                        <Link to={`peliculaDetalle/${pelicula.id}`} >
-                            <p>{pelicula.overview}</p>
-                            <Button backgroundColor={theme.colors.background} color={theme.colors.text}>
-                                Ver más
-                            </Button>
-                        </Link>
-                    </Slider>
+                            <ContenedorDeFlecha>
+                                <MdKeyboardArrowLeft />
+                            </ContenedorDeFlecha>
+                            <ContenedorCentrado>
+
+                                <Titulo width="auto" align="center">{pelicula.original_name}{pelicula.original_title}</Titulo>
+
+                                <Texto align="center" width="400px">{pelicula.overview}</Texto>
+
+                                <ContenedorCentrado>
+                                    <Link to={`peliculaDetalle/${pelicula.id}`} style={{ textDecoration: 'none', color: 'white' }} >
+                                        <Button backgroundColor={theme.colors.background} color={theme.colors.text}>
+                                            Ver más
+                                        </Button>
+                                    </Link>
+                                </ContenedorCentrado>
+
+                            </ContenedorCentrado>
+                            <ContenedorDeFlecha>
+                                <MdKeyboardArrowRight />
+                            </ContenedorDeFlecha>
+                        </CarruselImg>
+                    </article>
                 )
             })}
+
         </CarruselSection >
     )
 }

@@ -10,4 +10,5 @@ export const Tarjeta = styled.article`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 `;

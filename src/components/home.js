@@ -7,7 +7,7 @@ import { ContenedorGeneral } from './style/ContenedoresStyle'
 export class Home extends Component {
     render() {
         return (
-            <ContenedorGeneral>
+            <ContenedorGeneral margin="0px">
                 <Carrusel />
                 <UltimosLanzamientos />
                 <MejorPuntuadas />
