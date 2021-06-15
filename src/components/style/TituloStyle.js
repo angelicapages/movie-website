@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 export const Titulo = styled.h1`
 display: flex;
-justify-content: center;
-align-items: center;
+
 flex-wrap: wrap;
 text-align: center;
-font-size: large;
+font-size: medium;
+width: 200px;
+margin: 0px;
 `;

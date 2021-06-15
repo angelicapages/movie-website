@@ -9,6 +9,6 @@ margin: 0px;
 `;
 
 export const CarruselImg = styled.img`
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 50vh;
+    max-width: 100vh;
 `;

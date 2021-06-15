@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import theme from './Theme'
 
 export const Nav = styled.nav`
     display: flex ;
     flex-direction: row;
     width: 100vw;
-    background-color: #3a0ca3;
+    background-color: ${props => props.theme.colors.primary};
 `;
 
 export const Ul = styled.ul`

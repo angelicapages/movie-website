@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { Button } from './style/ButtonStyle'
 import { CarruselSection, CarruselImg } from './style/CarruselStyle'
 import { Titulo } from "./style/TituloStyle";
+import theme from './style/Theme'
+import Slider from 'infinite-react-carousel'
 
 const Carrusel = () => {
     const peliculasCarrusel = useFetch(url_carrusel)
@@ -15,16 +17,17 @@ const Carrusel = () => {
             {peliculasCarrusel.map(pelicula => {
                 return (
 
-                    <div key={pelicula.id}>
+                    <Slider key={pelicula.id}>
 
                         <CarruselImg src={`${base_url_img}${pelicula.poster_path}`} />
                         <Titulo>{pelicula.original_name}{pelicula.original_title}</Titulo>
                         <Link to={`peliculaDetalle/${pelicula.id}`} >
-                            <Button backgroundColor="#3a0ca3" color="#f1faee">
+                            <p>{pelicula.overview}</p>
+                            <Button backgroundColor={theme.colors.background} color={theme.colors.text}>
                                 Ver más
                             </Button>
                         </Link>
-                    </div>
+                    </Slider>
                 )
             })}
         </CarruselSection >

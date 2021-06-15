@@ -7,22 +7,24 @@ import Home from './components/home'
 import PeliculaPopular from './components/Pelicula'
 import PeliculaDetalle from './components/PeliculaDetalle'
 import { ContenedorGeneral } from './components/style/ContenedoresStyle'
-
+import { ThemeProvider } from 'styled-components'
+import theme from './components/style/Theme'
 function App() {
 
   return (
-
-    <ContenedorGeneral>
-      <BrowserRouter>
-        <NavBarTop />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Ultimos-Lanzamientos" component={UltimosLanzamientos} />
-        <Route exact path="/Populares" component={Populares} />
-        <Route exact path="/Buscar" component={Buscar} />
-        <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
-        <Route exact path="/PeliculaDetalle/:id" component={PeliculaDetalle} />
-      </BrowserRouter>
-    </ContenedorGeneral>
+    <ThemeProvider theme={theme}>
+      <ContenedorGeneral>
+        <BrowserRouter>
+          <NavBarTop />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Ultimos-Lanzamientos" component={UltimosLanzamientos} />
+          <Route exact path="/Populares" component={Populares} />
+          <Route exact path="/Buscar" component={Buscar} />
+          <Route exact path="/PeliculaPopular" component={PeliculaPopular} />
+          <Route exact path="/PeliculaDetalle/:id" component={PeliculaDetalle} />
+        </BrowserRouter>
+      </ContenedorGeneral>
+    </ThemeProvider>
   );
 }
 
