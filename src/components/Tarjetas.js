@@ -1,35 +1,29 @@
-import { Link } from 'react-router-dom'
-import './movie.css'
 import { base_url_img } from '../variables/variables'
-import { Card } from '@material-ui/core';
-import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
-import CardMedia from '@material-ui/core/CardMedia';
+import { Link } from 'react-router-dom'
+import { TarjetaImg } from './style/TarjetaStyle'
+import { Titulo } from './style/TextoStyle'
+import { Tarjeta } from './style/TarjetaStyle'
+import { ContenedorCentrado, ContenedorRow } from './style/ContenedoresStyle'
 
 const Tarjetas = ({ peliculas }) => {
     return (
-        <>
+        <ContenedorRow>
             {peliculas.map(pelicula => {
-                return <Grid item xs={6} sm={3}
-                    elevation={3}
-                    justify="center"
-                    alignItems="center"
-                    key={pelicula.id}>
+                return (
 
-                    <Card >
-                        <CardContent>
-                            <Link to={`peliculaDetalle/${pelicula.id}`} >
-                                <h1>{pelicula.original_name}{pelicula.original_title}</h1>
-                                <CardMedia>
-                                    <img src={`${base_url_img}${pelicula.poster_path}`} />
-                                </CardMedia>
-                            </Link>
-                        </CardContent>
-                    </Card>
 
-                </Grid>
+                    <Tarjeta key={pelicula.id}>
+                        <Link to={`peliculaDetalle/${pelicula.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                            <ContenedorCentrado>
+                                <TarjetaImg src={`${base_url_img}${pelicula.poster_path}`} />
+                                <Titulo width="200px" align="center">{pelicula.original_name}{pelicula.original_title}</Titulo>
+                            </ContenedorCentrado>
+                        </Link>
+                    </Tarjeta>
+
+                )
             })}
-        </>
+        </ContenedorRow>
 
     )
 }

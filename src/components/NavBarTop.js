@@ -1,47 +1,35 @@
 import { Link } from 'react-router-dom'
-import Theme from '../style/style'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { ThemeProvider } from '@material-ui/styles';
-// import MenuIcon from '@material-ui/icons/Menu';
-// import { IconButton } from '@material-ui/core';
+import { Nav, NavList, Ul } from './style/NavBarStyle'
 
-
-export default function NavBarTop() {
-
+const NavBarTop = () => {
 
   return (
 
-    <ThemeProvider theme={Theme}>
-      <AppBar color="primary" position="sticky" top="0px">
-        <Typography variant="h1">Movies</Typography>
-        <Toolbar>
-
-          {/* <IconButton edge="start" color="dark">
-            <MenuIcon />
-          </IconButton> */}
-
-          <Link to="/">
-            <Button >Home</Button>
+    <Nav>
+      <Ul>
+        <NavList>
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+            Home
+              </Link>
+        </NavList>
+        <NavList>
+          <Link to="/Ultimos-Lanzamientos" style={{ textDecoration: 'none', color: 'white' }}>
+            Ultimos lanzamientos
+              </Link>
+        </NavList>
+        <NavList>
+          <Link to="/Populares" style={{ textDecoration: 'none', color: 'white' }}>
+            Populares
+              </Link>
+        </NavList>
+        <NavList>
+          <Link to="/Buscar" style={{ textDecoration: 'none', color: 'white' }}>
+            Buscar
           </Link>
-
-          <Link to="/Ultimos-Lanzamientos">
-            <Button >Ultimos lanzamientos</Button>
-          </Link>
-
-          <Link to="/Populares">
-            <Button >Populares</Button>
-          </Link>
-
-          <Link to="/Buscar">
-            <Button >Buscar</Button>
-          </Link>
-
-        </Toolbar>
-      </AppBar>
-    </ThemeProvider>
+        </NavList>
+      </Ul>
+    </Nav>
 
   )
 }
+export default NavBarTop

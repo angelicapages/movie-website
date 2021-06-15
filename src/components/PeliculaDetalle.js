@@ -1,10 +1,11 @@
 import { base_url_img } from '../variables/variables'
-import { Card } from '@material-ui/core';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import { useParams } from 'react-router-dom'
 import useFetchDetalle from '../hooks/useFetchDetalle'
 import { url_base, type_movie, api_key, language } from '../variables/variables'
+import { TarjetaImg } from './style/TarjetaStyle'
+import { Button } from './style/ButtonStyle'
+import { ContenedorCentrado, ContenedorRow, ContenedorGeneral} from './style/ContenedoresStyle'
+import { Titulo, Texto } from './style/TextoStyle'
 
 const PeliculaDetalle = () => {
     let params = useParams();
@@ -14,26 +15,28 @@ const PeliculaDetalle = () => {
 
 
     const handleChange = () => {
-console.log (pelicula)
+        console.log(pelicula)
     }
 
 
     return (
-        <>
-            <Card>
-                <CardContent>
-                    <h1>{pelicula.original_name}{pelicula.original_title}</h1>
-                    <p>{pelicula.overview}</p>
-                    <CardMedia>
-                        <img src={`${base_url_img}${pelicula.poster_path}`} />
-                    </CardMedia>
-                    <button onClick={handleChange}>
-                        Trailer
-                    </button>
-                </CardContent>
-            </Card>
-        </>
+        <ContenedorCentrado>
+            <ContenedorRow>
+                <div>
+                    <TarjetaImg src={`${base_url_img}${pelicula.poster_path}`} />
+                </div>
+                <ContenedorGeneral>
 
+                    <Titulo align="left">{pelicula.original_name}{pelicula.original_title}</Titulo>
+                    <Texto width="300px" align="left">{pelicula.overview}</Texto>
+
+                    <Button onClick={handleChange} backgroundColor="#4cc9f0">
+                        Trailer
+                    </Button>
+
+                </ContenedorGeneral>
+            </ContenedorRow>
+        </ContenedorCentrado>
     )
 }
 

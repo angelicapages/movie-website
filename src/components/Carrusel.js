@@ -1,18 +1,53 @@
 import { url_carrusel } from '../variables/variables'
 import useFetch from '../hooks/useFetch'
-import Tarjetas from './Tarjetas'
-
+import { base_url_img } from '../variables/variables'
+import { Link } from 'react-router-dom'
+import { Button } from './style/ButtonStyle'
+import { CarruselSection, CarruselImg, ContenedorDeFlecha } from './style/CarruselStyle'
+import { Titulo, Texto } from "./style/TextoStyle";
+import theme from './style/Theme'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { ContenedorCentrado } from './style/ContenedoresStyle'
 const Carrusel = () => {
     const peliculasCarrusel = useFetch(url_carrusel)
+
     return (
-        <section>
-            <h1>Carrusel</h1>
-            <div>
-                <Tarjetas
-                    peliculas={peliculasCarrusel}
-                />
-            </div>
-        </section>
+
+        <CarruselSection>
+
+            {peliculasCarrusel.map(pelicula => {
+                return (
+
+                    <article key={pelicula.id}>
+                        <CarruselImg url={`${base_url_img}${pelicula.poster_path}`}>
+
+                            <ContenedorDeFlecha>
+                                <MdKeyboardArrowLeft />
+                            </ContenedorDeFlecha>
+                            <ContenedorCentrado>
+
+                                <Titulo width="auto" align="center">{pelicula.original_name}{pelicula.original_title}</Titulo>
+
+                                <Texto align="center" width="400px">{pelicula.overview}</Texto>
+
+                                <ContenedorCentrado>
+                                    <Link to={`peliculaDetalle/${pelicula.id}`} style={{ textDecoration: 'none', color: 'white' }} >
+                                        <Button backgroundColor={theme.colors.background} color={theme.colors.text}>
+                                            Ver más
+                                        </Button>
+                                    </Link>
+                                </ContenedorCentrado>
+
+                            </ContenedorCentrado>
+                            <ContenedorDeFlecha>
+                                <MdKeyboardArrowRight />
+                            </ContenedorDeFlecha>
+                        </CarruselImg>
+                    </article>
+                )
+            })}
+
+        </CarruselSection >
     )
 }
 

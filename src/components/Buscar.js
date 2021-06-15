@@ -1,7 +1,8 @@
-import TextField from '@material-ui/core/TextField';
+
 import Tarjetas from './Tarjetas';
 import { url_buscar, pagina } from '../variables/variables'
 import { useEffect, useState } from 'react'
+import {ContenedorRow, ContenedorGeneral} from './style/ContenedoresStyle'
 
 const Buscar = () => {
 
@@ -25,14 +26,14 @@ const Buscar = () => {
 
     return (
 
-        <section>
-            <TextField style={{ margin: 8 }} onChange={handleChange} label="Buscar" id="standard-full-width" />
-            <div>
+        <ContenedorGeneral margin="100px">
+            <input onChange={handleChange} label="Buscar" />
+            <ContenedorRow>
                 {pelicula &&
                     <Tarjetas peliculas={pelicula} ></Tarjetas>
                 }
-            </div>
-        </section>
+            </ContenedorRow>
+        </ContenedorGeneral>
 
     )
 }
