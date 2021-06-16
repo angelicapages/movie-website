@@ -1,18 +1,21 @@
 import { url_ultimos_lanzamientos } from '../variables/variables'
 import useFetch from '../hooks/useFetch'
 import Tarjetas from './Tarjetas'
+import { ContenedorGeneral, ContenedorRow } from './style/ContenedoresStyle'
+import { Titulo } from './style/TextoStyle'
 
 const UltimosLanzamientos = () => {
     const peliculasUltimosLanzamientos = useFetch(url_ultimos_lanzamientos)
+    
     return (
-        <section>
-            <h1>Ultimos lanzamientos</h1>
-            <div>
+        <ContenedorGeneral margin="100px">
+            <Titulo>Ultimos lanzamientos</Titulo>
+            <ContenedorRow>
                 <Tarjetas
                     peliculas={peliculasUltimosLanzamientos}
                 />
-            </div>
-        </section>
+            </ContenedorRow>
+        </ContenedorGeneral>
     )
 }
 

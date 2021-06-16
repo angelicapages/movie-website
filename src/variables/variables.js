@@ -13,3 +13,4 @@ export const url_carrusel = "https://api.themoviedb.org/3/movie/now_playing?api_
 export const url_trailer = "https://api.themoviedb.org/3/movie/337404/videos?api_key=f99c23308f40c1c01f9f6b78ac66fa01&languaje=es-ES"
 // https://api.themoviedb.org/3/movie/632357?api_key=c7e318bc4679faa16a6f940e1435e019&language=es-ES
 export const base_url_img = "https://image.tmdb.org/t/p/original"
+export const base_url_video = "https://www.youtube.com/watch?v="
