@@ -6,10 +6,10 @@ const theme = {
         primary: '#457b9d',
         secondary: '#e63946',
       },
-a: {
+    a: {
     textDecoration: 'none',
     color: 'white'
-}
+    }
 
   };
 

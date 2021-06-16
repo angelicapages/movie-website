@@ -6,6 +6,7 @@ export const Nav = styled.nav`
     flex-direction: row;
     width: 100%;
     background-color: ${theme.colors.primary};
+    position: fixed;
 `;
 
 export const Ul = styled.ul`
