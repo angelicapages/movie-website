@@ -6,6 +6,17 @@ display: flex;
 color: ${theme.colors.text};
 flex-wrap: wrap;
 text-align: ${(props)=> props.align};
+font-size: x-large;
+margin: 0px;
+padding: 20px;
+width: ${(props)=> props.width};
+`;
+
+export const TituloPelicula = styled.h2`
+display: flex;
+color: ${theme.colors.text};
+flex-wrap: wrap;
+text-align: ${(props)=> props.align};
 font-size: large;
 margin: 0px;
 padding: 20px;
