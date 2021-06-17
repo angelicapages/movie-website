@@ -7,6 +7,7 @@ export const ContenedorGeneral = styled.div`
     background-color: ${props => props.theme.colors.background};
 `;
 
+
 export const ContenedorRow = styled.div`
     margin: 0px;
     display: flex;
@@ -31,6 +32,20 @@ export const Overlay = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+`;
+
+export const ContenedorFondoDetalle = styled.section`
+display: flex;
+background:  url(${(props)=> props.url});
+height: 100vh;
+align-items: center;
+
+`;
+
+export const ContenedorDetalle = styled.section`
+    display: flex;
+    flex-direction: column;
+
 `;
 
 export const ContenedorDeTexto = styled.div`
