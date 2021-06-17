@@ -5,6 +5,7 @@ export const Nav = styled.nav`
     display: flex ;
     flex-direction: row;
     width: 100%;
+    z-index: 3;
     background-color: ${theme.colors.primary};
     position: fixed;
 `;
