@@ -23,6 +23,17 @@ export const ContenedorCentrado = styled.div`
     align-items: center;
 `;
 
+export const Overlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 export const ContenedorFondoDetalle = styled.section`
 display: flex;
 background:  url(${(props)=> props.url});
@@ -37,3 +48,6 @@ export const ContenedorDetalle = styled.section`
 
 `;
 
+export const ContenedorDeTexto = styled.div`
+z-index: 3;
+`;

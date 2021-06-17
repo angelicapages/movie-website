@@ -1,21 +1,22 @@
 import styled from 'styled-components'
+import theme from './Theme';
 
 export const CarruselSection = styled.section`
 display: flex;
-flex-direction: row;
 margin: 0px;
-
+height: 70vh;
 `;
 
 export const CarruselImg = styled.section`
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
+display: ${(props)=> props.estado=== true? 'block' : 'none'};
 background:  url(${(props)=> props.url});
-width: 200vh;
-height: 70vh;
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 70%;
 `;
+
+
 
 export const ContenedorDeFlecha = styled.div`
 width: 50px;
@@ -25,4 +26,8 @@ border-radius: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-`
+:hover{
+    background-color: ${theme.colors.primary};
+    cursor: pointer;
+}
+`;
