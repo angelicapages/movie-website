@@ -2,7 +2,9 @@
 import Tarjetas from './Tarjetas';
 import { url_buscar, pagina } from '../variables/variables'
 import { useEffect, useState } from 'react'
-import {ContenedorRow, ContenedorGeneral} from './style/ContenedoresStyle'
+import { ContenedorRow, ContenedorGeneral, ContenedorDeIcono} from './style/ContenedoresStyle'
+import { FaSistrix } from "react-icons/fa";
+import { Titulo } from './style/TextoStyle';
 
 const Buscar = () => {
 
@@ -27,11 +29,19 @@ const Buscar = () => {
     return (
 
         <ContenedorGeneral margin="100px">
-            <input onChange={handleChange} label="Buscar" />
+            <Titulo>Buscar</Titulo>
             <ContenedorRow>
-                {pelicula &&
-                    <Tarjetas peliculas={pelicula} ></Tarjetas>
-                }
+                <ContenedorDeIcono>
+                    <FaSistrix />
+                </ContenedorDeIcono>
+                <input onChange={handleChange} label="Buscar"></input>
+
+                <ContenedorRow>
+                    {pelicula &&
+                        <Tarjetas peliculas={pelicula} ></Tarjetas>
+                    }
+                </ContenedorRow>
+
             </ContenedorRow>
         </ContenedorGeneral>
 

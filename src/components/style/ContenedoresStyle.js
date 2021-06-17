@@ -51,3 +51,13 @@ export const ContenedorDetalle = styled.section`
 export const ContenedorDeTexto = styled.div`
 z-index: 3;
 `;
+
+export const ContenedorDeIcono = styled.div`
+width: 50px;
+height: 50px;
+background-color: #ced4da;
+border-radius: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
