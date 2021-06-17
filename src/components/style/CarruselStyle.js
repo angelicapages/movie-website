@@ -1,17 +1,19 @@
 import styled from 'styled-components'
 import theme from './Theme';
+
 export const CarruselSection = styled.section`
 display: flex;
-flex-direction: row;
 margin: 0px;
-
+height: 70vh;
 `;
 
 export const CarruselImg = styled.section`
+display: ${(props)=> props.estado=== true? 'block' : 'none'};
 background:  url(${(props)=> props.url});
+position: absolute;
 z-index: 1;
-width: 200vh;
-height: 70vh;
+width: 100%;
+height: 70%;
 `;
 
 
