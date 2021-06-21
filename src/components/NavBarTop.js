@@ -8,7 +8,7 @@ const NavBarTop = () => {
     <Nav>
       <Ul>
         <NavList>
-          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+          <Link to="/" >
             Home
               </Link>
         </NavList>

@@ -13,6 +13,7 @@ const PeliculaDetalle = () => {
     const pelicula = useFetchDetalle(paramsUrl)
 
 
+    // mejor no dejar funciones como esta que no hacen nada
     const handleChange = () => {
         console.log(pelicula)
     }

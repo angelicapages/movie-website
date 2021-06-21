@@ -11,6 +11,7 @@ export const ContenedorGeneral = styled.div`
 export const ContenedorRow = styled.div`
     margin: 0px;
     display: flex;
+    ${'' /* no es necesario aclarar flex-direction: row */}
     flex-direction: row;
     flex-wrap: wrap;
 `;
@@ -29,6 +30,7 @@ export const Overlay = styled.div`
   background-color: rgba(0,0,0,0.8);
   z-index: 2;
   display: flex;
+  ${'' /* no es necesario aclarar flex-direction: row */}
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;

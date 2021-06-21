@@ -6,6 +6,8 @@ const useFetch=(param)=> {
         fetch(param)
             .then(res => res.json())
             .then(data => {
+                // a menos que estes usando una variable, usa la 
+                // sintaxis clasica de propiedades de objeto: setPelicula(data.results)
                 setPelicula(data['results'])
             }
             )

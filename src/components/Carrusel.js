@@ -32,6 +32,7 @@ const Carrusel = () => {
             {peliculasCarrusel.map((pelicula, index) =>
 
                 <article key={pelicula.id}>
+                {/* se podria decir estado={index === actualSlide}  */}
                     <CarruselImg estado={index === actualSlide ? true : false} url={`${base_url_img}${pelicula.poster_path}`}>
                         <Overlay>
                             <ContenedorDeFlecha onClick={anteriorSlide}>
