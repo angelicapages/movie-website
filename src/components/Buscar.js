@@ -9,6 +9,8 @@ import { Titulo } from './style/TextoStyle';
 const Buscar = () => {
 
     const [peliculaBuscada, setpeliculaBuscada] = useState('')
+    // por el nombe, esta variable da la impesion de ser un solo dato, una sola pelicula, pero son muchas
+    // usa plurales en las variables en estos casos
     const [pelicula, setPelicula] = useState([])
 
     const handleChange = e => {

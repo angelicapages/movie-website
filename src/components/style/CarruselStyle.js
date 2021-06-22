@@ -8,6 +8,8 @@ height: 70vh;
 `;
 
 export const CarruselImg = styled.section`
+${'' /* seria lo mismo decir: */}
+${'' /* display: ${(props)=> props.estado ? 'block' : 'none'}; */}
 display: ${(props)=> props.estado=== true? 'block' : 'none'};
 background:  url(${(props)=> props.url});
 position: absolute;

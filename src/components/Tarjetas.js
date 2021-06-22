@@ -8,6 +8,7 @@ import { ContenedorCentrado, ContenedorRow } from './style/ContenedoresStyle'
 const Tarjetas = ({ peliculas }) => {
     return (
         <ContenedorRow>
+        {/* privilegia usar return implicito en maps del jsx */}
             {peliculas.map(pelicula => {
                 return (
 

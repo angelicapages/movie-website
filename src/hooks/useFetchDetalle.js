@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const useFetchDetalle=(param)=> {
+    // la pelicula va a ser un objeto, no un array! 
     const [pelicula, setPelicula] = useState([])
     useEffect(() => {
         fetch(param)
